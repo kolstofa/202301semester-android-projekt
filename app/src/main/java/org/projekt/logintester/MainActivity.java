@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             public Unit invoke(OAuthToken oAuthToken, Throwable throwable) {
                 if(oAuthToken!=null){ //토큰이 넘어옴, 로그인 성공
                     Toast.makeText(MainActivity.this, "Signin Succeed.", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(MainActivity.this, UsermodeActivity.class); //To
+                    Intent intent = new Intent(MainActivity.this, FingerprintActivity.class); //To
                     startActivity(intent);
                 }
                 if(throwable!=null){ //결과에 오류가 있을때

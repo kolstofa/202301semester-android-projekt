@@ -4,6 +4,7 @@
     package="org.projekt.logintester">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
 
     <application
         android:name=".GlobalApplication"
@@ -16,6 +17,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginTester"
         tools:targetApi="31">
+        <activity
+            android:name=".FingerprintActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat" />
 
         <activity
             android:name=".MainActivity"
@@ -45,18 +50,20 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <!-- Redirect URI: "kakao${NATIVE_APP_KEY}://oauth" -->
-                <data android:host="oauth"
+                <data
+                    android:host="oauth"
                     android:scheme="@string/kakao_oauth_host" />
             </intent-filter>
         </activity>
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
-            android:value="4fe7e73a019fdc0b583c32dd04fb6cf3"/>
+            android:value="4fe7e73a019fdc0b583c32dd04fb6cf3" />
     </application>
 
 </manifest>

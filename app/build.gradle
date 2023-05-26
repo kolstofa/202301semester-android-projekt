@@ -78,6 +78,9 @@ dependencies {
 
     //Kakao usage
     implementation "com.kakao.sdk:v2-all:2.13.0"
+    //Fingerprint
+    implementation "androidx.biometric:biometric:1.1.0"
+    implementation 'androidx.biometric:biometric:1.2.0-alpha05'
 
     implementation 'com.github.bumptech.glide:glide:4.15.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.15.1'
